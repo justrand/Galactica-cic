@@ -1,0 +1,515 @@
+body {
+    background-color: #FFFFFF;
+    
+}
+
+H1 {
+    color: #000000;
+}
+h3 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.galacticaLabel {
+    color: #111111;
+    font-weight: bold;
+    font-size: 105%;
+}
+
+.galacticaPadding10 {
+    padding-left: 10px;
+}
+
+.galacticaPadding20 {
+    padding-left: 20px;
+}
+
+
+.galacticaLine {
+    line-height: 3em;
+    float: left;
+    clear: right;
+    
+}
+
+.galacticaExpansionBorder {
+    border-color: #126F8F;
+    border-style: solid;
+    border-width: 1px;
+    width: 90%;
+    clear: both;
+    padding: 2px;
+    margin: 2px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+   
+}
+
+.galacticaPlayerAmount {
+    clear: both;
+}
+
+.galacticaLineCheckbox {
+    clear: both;
+    float: left;
+    width: 50px;
+}
+
+
+.character {
+    font-weight: bold;
+}
+
+.player-label {
+    font-weight: bold;
+    padding-top: 10px;
+}
+
+.programContainer {
+    width: 620px;
+    margin: 0px auto;
+    padding: 0px;
+    text-align: left;
+}
+
+/* Card styles */
+
+.cardPilot {
+    background-color: #c6372c;
+    border-color: #000000;
+    border-style: solid;
+    border-width: 1px;
+    margin-left: 5px;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+.cardSupport {
+    background-color: #5995cf;
+    border-color: #000000;
+    border-style: solid;
+    border-width: 1px;
+    margin-left: 5px;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+.cardMilitary {
+    background-color: #7abc74;
+    border-color: #000000;
+    border-style: solid;
+    border-width: 1px;
+    margin-left: 5px;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+.cardPolitical {
+    background-color: #f9f845;
+    border-color: #000000;
+    border-style: solid;
+    border-width: 1px;
+    margin-left: 5px;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+.cardCylon {
+    background-color: #a7bac0;
+    border-color: #000000;
+    border-style: solid;
+    border-width: 1px;
+    margin-left: 5px;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+.cardEmpty {
+    background-color: white;
+    border-color: #000000;
+    border-style: solid;
+    border-width: 1px;
+    margin-left: 5px;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+.drawPolitics {
+    font-weight: bold;
+    font-variant: normal;
+    background-color: #eae5a5;
+    border-style: solid;
+    border-bottom-width: 1px;
+    border-top-width: 5px;
+    border-left-width: 5px;
+    border-right-width: 1px;
+    border-color: #ded752;
+    text-align: left;   
+}
+
+.drawLeadership {
+    font-weight: bold;
+    font-variant: normal;
+    background-color: #c9dca5;
+    border-style: solid;
+    border-bottom-width: 1px;
+    border-top-width: 5px;
+    border-left-width: 5px;
+    border-right-width: 1px;
+    border-color: #87d04b;
+    text-align: left;
+}
+
+.drawTactics {
+    font-weight: bold;
+    font-variant: normal;
+    background-color: #cbb5c2;
+    border-style: solid;
+    border-bottom-width: 1px;
+    border-top-width: 5px;
+    border-left-width: 5px;
+    border-right-width: 1px;
+    border-color: #956e8b;
+    text-align: left;
+}
+
+.drawPiloting {
+    font-weight: bold;
+    font-variant: normal;
+    background-color: #c58d7e;
+    border-style: solid;
+    border-bottom-width: 1px;
+    border-top-width: 5px;
+    border-left-width: 5px;
+    border-right-width: 1px;
+    border-color: #ba272f;
+    text-align: left;
+}
+
+.drawEngineering {
+    font-weight: bold;
+    font-variant: normal;
+    background-color: #85a1ac;
+    border-style: solid;
+    border-bottom-width: 1px;
+    border-top-width: 5px;
+    border-left-width: 5px;
+    border-right-width: 1px;
+    border-color: #126f8f;
+    text-align: left;
+}
+
+.drawTreachery {
+    font-weight: bold;
+    font-variant: normal;
+    background-color: #c1b19a;
+    border-style: solid;
+    border-bottom-width: 1px;
+    border-top-width: 5px;
+    border-left-width: 5px;
+    border-right-width: 1px;
+    border-color: #b47e4f;
+    text-align: left;
+}
+
+.drawPoliticsTactics {
+    font-weight: bold;
+    font-variant: normal;
+    background-color: #c1b19a;
+    border-style: solid;
+    border-bottom-width: 1px;
+    border-top-width: 5px;
+    border-left-width: 5px;
+    border-right-width: 1px;
+    border-color: #ded752;
+    
+    /* For WebKit (Safari, Google Chrome etc) */
+    background: -webkit-gradient(linear, left top, right top, from(#eae5a5), to(#cbb5c2), color-stop(0.7, #c9dca5));
+    /* For Mozilla/Gecko (Firefox etc) */
+    background: -moz-linear-gradient(left top, #eae5a5, #cbb5c2 70%);
+    /* For Internet Explorer 5.5 - 7 */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorStr=#eae5a5, endColorStr=#cbb5c2, GradientType=1);
+    /* For Internet Explorer 8 */
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#eae5a5, endColorstr=#cbb5c2, GradientType=1)";
+    text-align: left;
+}
+
+.drawLeadershipEngineering {
+    font-weight: bold;
+    font-variant: normal;
+    background-color: #c1b19a;
+    border-style: solid;
+    border-bottom-width: 1px;
+    border-top-width: 5px;
+    border-left-width: 5px;
+    border-right-width: 1px;
+    border-color: #87d04b;
+    
+    /* For WebKit (Safari, Google Chrome etc) */
+    background: -webkit-gradient(linear, left top, right top, from(#c9dca5), to(#85a1ac), color-stop(0.7, #85a1ac));
+    /* For Mozilla/Gecko (Firefox etc) */
+    background: -moz-linear-gradient(left top, #c9dca5, #85a1ac 70%);
+    /* For Internet Explorer 5.5 - 7 */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorStr=#c9dca5, endColorStr=#85a1ac, GradientType=1);
+    /* For Internet Explorer 8 */
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#c9dca5, endColorstr=#85a1ac, GradientType=1)";
+    text-align: left;
+}
+
+.drawLeadershipPolitics {
+    font-weight: bold;
+    font-variant: normal;
+    background-color: #c1b19a;
+    border-style: solid;
+    border-bottom-width: 1px;
+    border-top-width: 5px;
+    border-left-width: 5px;
+    border-right-width: 1px;
+    border-color: #87d04b;
+    
+    /* For WebKit (Safari, Google Chrome etc) */
+    background: -webkit-gradient(linear, left top, right top, from(#c9dca5), to(#eae5a5), color-stop(0.7, #eae5a5));
+    /* For Mozilla/Gecko (Firefox etc) */
+    background: -moz-linear-gradient(left top, #c9dca5, #eae5a5 70%);
+    /* For Internet Explorer 5.5 - 7 */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorStr=#c9dca5, endColorStr=#eae5a5, GradientType=1);
+    /* For Internet Explorer 8 */
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#c9dca5, endColorstr=#eae5a5, GradientType=1)";
+    text-align: left;
+}
+
+.drawTacticsLeadership {
+    font-weight: bold;
+    font-variant: normal;
+    background-color: #c1b19a;
+    border-style: solid;
+    border-bottom-width: 1px;
+    border-top-width: 5px;
+    border-left-width: 5px;
+    border-right-width: 1px;
+    border-color: #956e8b;
+    
+    /* For WebKit (Safari, Google Chrome etc) */
+    background: -webkit-gradient(linear, left top, right top, from(#cbb5c2), to(#c9dca5), color-stop(0.7, #c9dca5));
+    /* For Mozilla/Gecko (Firefox etc) */
+    background: -moz-linear-gradient(left top, #cbb5c2, #c9dca5 70%);
+    /* For Internet Explorer 5.5 - 7 */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorStr=#cbb5c2, endColorStr=#c9dca5, GradientType=1);
+    /* For Internet Explorer 8 */
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#cbb5c2, endColorstr=#c9dca5, GradientType=1)";
+    text-align: left;
+}
+
+.drawTreacheryEngineering {
+    font-weight: bold;
+    font-variant: normal;
+    background-color: #c1b19a;
+    border-style: solid;
+    border-bottom-width: 1px;
+    border-top-width: 5px;
+    border-left-width: 5px;
+    border-right-width: 1px;
+    border-color: #b47e4f;
+    
+    /* For WebKit (Safari, Google Chrome etc) */
+    background: -webkit-gradient(linear, left top, right top, from(#c1b19a), to(#85a1ac), color-stop(0.7, #85a1ac));
+    /* For Mozilla/Gecko (Firefox etc) */
+    background: -moz-linear-gradient(left top, #c1b19a, #85a1ac 70%);
+    /* For Internet Explorer 5.5 - 7 */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorStr=#c1b19a, endColorStr=#85a1ac, GradientType=1);
+    /* For Internet Explorer 8 */
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#c1b19a, endColorstr=#85a1ac, GradientType=1)";
+    text-align: left;
+    float:inherit;
+}
+
+.drawTreacheryTactics {
+    font-weight: bold;
+    font-variant: normal;
+    background-color: #c1b19a;
+    border-style: solid;
+    border-bottom-width: 1px;
+    border-top-width: 5px;
+    border-left-width: 5px;
+    border-right-width: 1px;
+    border-color: #b47e4f;
+    
+    /* For WebKit (Safari, Google Chrome etc) */
+    background: -webkit-gradient(linear, left top, right top, from(#c1b19a), to(#cbb5c2), color-stop(0.7, #85a1ac));
+    /* For Mozilla/Gecko (Firefox etc) */
+    background: -moz-linear-gradient(left top, #c1b19a, #cbb5c2 70%);
+    /* For Internet Explorer 5.5 - 7 */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorStr=#c1b19a, endColorStr=#cbb5c2, GradientType=1);
+    /* For Internet Explorer 8 */
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#c1b19a, endColorstr=#cbb5c2, GradientType=1)";
+    text-align: left;
+    float:inherit;
+}
+
+.drawTacticsPiloting {
+    font-weight: bold;
+    font-variant: normal;
+    background-color: #c1b19a;
+    border-style: solid;
+    border-bottom-width: 1px;
+    border-top-width: 5px;
+    border-left-width: 5px;
+    border-right-width: 1px;
+    border-color: #956e8b;
+    
+    /* For WebKit (Safari, Google Chrome etc) */
+    background: -webkit-gradient(linear, left top, right top, from(#cbb5c2), to(#c58d7e), color-stop(0.7, #c58d7e));
+    /* For Mozilla/Gecko (Firefox etc) */
+    background: -moz-linear-gradient(left top, #cbb5c2, #c58d7e 70%);
+    /* For Internet Explorer 5.5 - 7 */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorStr=#cbb5c2, endColorStr=#c58d7e, GradientType=1);
+    /* For Internet Explorer 8 */
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#cbb5c2, endColorstr=#c58d7e, GradientType=1)";
+    text-align: left;
+}
+
+.drawUnknownType {
+    font-weight: bold;
+    font-variant: normal;
+    background-color: #DDDDDD;
+    border-style: solid;
+    border-bottom-width: 1px;
+    border-top-width: 5px;
+    border-left-width: 5px;
+    border-right-width: 1px;
+    border-color: #AAAAAA;
+    text-align: left;
+}
+
+div.cardDrawContainer {
+    float: left;
+    width: 30%;
+    position: relative;
+    
+}
+
+div.cardAbilityContainer {
+    margin-left: 30%;
+    width: 65%;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #000000;
+    position: relative;
+ 
+}
+
+div.cardContainer {    
+    width: 610px;
+    padding-left: 10px;
+}
+
+div.cardTitleContainer {
+    clear: left;  
+}
+
+.cardLocation {
+    text-align: center;
+    font-size: 90%;
+    font-weight: normal;
+}
+
+.cardName {
+    text-align: center;
+}
+
+.cardAbilityTitle {
+    font-weight: bold;
+}
+
+.cardAbilityText {
+    font-weight: normal;
+}
+
+/* Card background */
+.octagon { 
+    width: inherit; 
+    /*height: 100%;*/ 
+    background: #c8c1b1; 
+    position: relative; 
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 10px;
+} 
+
+.octagon:before { 
+    content: ""; 
+    position: absolute;
+    top: 0; 
+    left: 0; 
+    border-bottom: 15px solid #c8c1b1;
+    border-left: 29px solid #FFFFFF; 
+    border-right: 29px solid #FFFFFF; 
+    width: 562px; height: 0; 
+} 
+
+.octagon:after { 
+    content: ""; 
+    position: absolute; 
+    bottom: 0; 
+    left: 0; 
+    border-top: 15px solid #c8c1b1;
+    border-left: 29px solid #FFFFFF; 
+    border-right: 29px solid #FFFFFF; 
+    width: 562px; height: 0;
+}
+
+.goog-button {
+  color: #036;
+  border-color: #036;
+  background-color: #69c;
+}
+
+/* State: disabled. */
+.goog-button-disabled {
+  border-color: #333;
+  color: #333;
+  background-color: #999;
+}
+
+/* State: hover. */
+.goog-button-hover {
+  color: #369;
+  border-color: #369;
+  background-color: #9cf;
+}
+
+/* State: active. */
+.goog-button-active {
+  color: #69c;
+  border-color: #69c;
+}
+
+.goog-checkbox {
+  border: 1px solid #1C5180;
+  display: -moz-inline-box;
+  display: inline-block;
+  font-size: 1px;  /* Fixes the height in IE6 */
+  height: 40px;
+  margin: 0 4px 0 1px;
+  vertical-align: text-bottom;
+  width: 40px;
+}
+
+.goog-checkbox-checked {
+  background-color: #27B3AC;
+}
+
+.goog-checkbox-undetermined {
+  background-color: #98A3A3;
+}
+
+.goog-checkbox-unchecked {
+  background-color: #BAD9D7;
+}
+
+.goog-checkbox-disabled {
+  border: 1px solid #999999;
+  background-position: -7px;
+  background-color: #CED6D6;
+}

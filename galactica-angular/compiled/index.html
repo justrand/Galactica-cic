@@ -1,0 +1,84 @@
+<!DOCTYPE = HTML>
+<html>
+    <head>
+        <title>Galactica CIC</title>
+        <script src="galactica-compiled.js"></script>
+
+        <link rel="stylesheet" href="galactica_styles.css">
+    </head>
+    <body onload="galactica.start()">
+    <h1>Galactica CIC</h1>
+    
+    
+    
+    
+    <div id="programContainer" class="programContainer">
+        <div id="setupContainer" class="octagon">
+            <div class="galacticaLabel">Setup</div>
+            <div class="galacticaExpansionBorder">
+                
+                <div style="clear:both;float:none"><!--Pegagus line-->
+                    <div class="galacticaLineCheckbox">
+                        <span name="setupExpansionPegasus" id="setupExpansionPegasus"></span>
+                    </div>
+                    <div class="galacticaLine">Pegasus Expansion</div>
+                </div>
+                <div class="galacticaPadding10" style="clear:both;float:none"><!-- Cylon leader allowed line-->
+                    <div class="galacticaLineCheckbox">
+                        <span name="setupEnableCylonLeaders" id="setupEnableCylonLeaders"></span>
+                    </div>
+                    <div class="galacticaLine">Allow Cylon Leaders</div>
+                </div>
+                <div class="galacticaPadding20" style="clear:both;float:none"><!-- Allow refuse cylon leader -->
+                    <div class="galacticaLineCheckbox">
+                        <span name="setupAllowPlayersRefuseCylon" id="setupAllowPlayersRefuseCylon"></span>
+                    </div>
+                    <div class="galacticaLine">Allow players to refuse Cylon Leader</div>
+                </div>
+                <div style="clear:both"> </div>
+            </div><!--Galactica expansion border -->
+            
+            <div class="galacticaExpansionBorder">
+                <div style="clear:both">
+                    <div class="galacticaLineCheckbox">
+                        <span name ="setupExpansionExodus" id="setupExpansionExodus"></span>
+                    </div>
+                    <div class="galacticaLine">Exodus Expansion</div>
+                </div>
+                <div class="galacticaPadding10" style="clear:both">
+                    <div class="galacticaLineCheckbox">
+                        <span name="setupExpansionExodusExtra" id="setupExpansionExodusExtra"></span>
+                    </div>
+                    <div class="galacticaLine">Add one extra "not a Cylon" card into the loyalty deck.</div>
+                </div>
+                <div style="clear:both"> </div>
+            </div><!--Galactica expansion border -->
+            
+            <div class="galacticaExpansionBorder">
+                <div style="clear:both">
+                    <div class="galacticaLineCheckbox">
+                        <span name ="setupExpansionDaybreak" id="setupExpansionDaybreak"></span>
+                    </div>
+                    <div class="galacticaLine">Daybreak Expansion</div>
+                </div>
+                
+                <div style="clear:both"> </div>
+            </div><!--Galactica expansion border -->
+            
+            <div id="setupPlayerAmount" class="galacticaPlayerAmount">Players: <input type="radio" name="setupPlayers" value="3" class="setupPlayers"> 3
+                <input type="radio" name="setupPlayers" value="4" class="setupPlayers"> 4
+                <input type="radio" name="setupPlayers" value="5" class="setupPlayers" checked="checked"> 5
+                <input type="radio" name="setupPlayers" value="6" class="setupPlayers"> 6
+                <input type="radio" name="setupPlayers" value="7" class="setupPlayers"> 7
+            </div>
+            <p><small><strong>Hint: </strong>When selecting characters, click on the character's name to open a full card.</small></p> 
+        
+        </div>
+      
+        <div id="cards"></div>
+        <div id="selectedCards"></div>
+    </div>
+       
+    </body>
+    
+</html>

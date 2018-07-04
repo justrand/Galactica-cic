@@ -1,0 +1,59 @@
+<!DOCTYPE = HTML>
+<html ng-app="galacticaCIC">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Galactica CIC - Assistant for Battlestar Galactica boardgame</title>
+
+        
+        <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">
+        <link rel="stylesheet" href="lib/bootstrap/css/bootstrap-responsive.css">
+        <link rel="stylesheet" href="css/galactica_styles.css">
+        <script data-main="app.js" src="lib/requirejs/require.js"></script>
+        
+        <script src="lib/angular/angular.js"></script>
+        <script src="https://code.jquery.com/jquery.js"></script>
+        <script type="text/javascript" src="draftController.js"></script>
+    </head>
+    <body>
+    <div class="programContainer">
+    <h1>Galactica CIC</h1>
+    
+    <div class="octagon" ng-show="!draftStarted" ng-controller="DraftController">
+    <form novalidate>
+    <div class="galacticaExpansionBorder">
+        <h3>Character sets</h3>
+        <input type="checkbox" ng-model="draftSetup.characterSet.Core"> Core game characters<br>
+        <input type="checkbox" ng-model="draftSetup.characterSet.Pegasus"> Pegasus Expansion characters<br>
+        <input type="checkbox" ng-model="draftSetup.characterSet.Exodus"> Exodus Expansion characters<br>
+        <input type="checkbox" ng-model="draftSetup.characterSet.Daybreak"> Daybreak Expansion characters
+    </div>
+    <div class="galacticaExpansionBorder">
+        <h3>Draft Rules</h3>
+        <input type="checkbox" ng-model="draftSetup.ruleSet.CylonLeaders"> Include Cylon leaders<br>
+        <input type="checkbox" ng-model="draftSetup.ruleSet.RefuseCylonLeader"> Allow players to refuse Cylon Leader<br>
+        <input type="checkbox" ng-model="draftSetup.ruleSet.ExtraLoyaltyCard"> Add extra loyalty card into the loyalty deck
+    </div>
+    <div id="setupPlayerAmount" class="galacticaPlayerAmount galacticaPadding10">Players: <input type="radio" ng-model="draftSetup.playerAmount" value="3"> 3
+        <input type="radio" ng-model="draftSetup.playerAmount" value="4"> 4
+        <input type="radio" ng-model="draftSetup.playerAmount" value="5"> 5
+        <input type="radio" ng-model="draftSetup.playerAmount" value="6"> 6
+        <input type="radio" ng-model="draftSetup.playerAmount" value="7"> 7
+    </div>
+    
+ 
+    <p class="galacticaPadding20"><small><strong>Hint: </strong>When selecting characters, click on the character's name to open a full card.</small></p> 
+    <div class="galacticaPadding20"><button ng-click="startDraft(draftSetup)">Start draft</button></div>
+ </form>
+      
+        
+    </div>
+       <div ng-controller="DraftController" ng-show="cards.length!=0">
+           <div ng-repeat="card in cards">
+               <div ng-include="layoutUrl"></div>
+           </div>
+       </div>
+       <div ng-view id="selectedCards"></div>
+    </div><!-- program container -->
+    </body>
+    
+</html>

@@ -1,0 +1,38 @@
+<div class="cardContainer octagon">
+        <div class="cardName cardTitleContainer">
+            <span class="character"> {{card.getName()}}</span>
+            <span class="cardPilot">{{card.getType()}}</span>
+            <span class="character">{{card.getTitle()}}</span><!-- president, admiral or cac-->
+        </div>
+        <div class="cardDrawContainer">
+            <!-- n divs of card draws -->
+            <div ng-repeat="skill in card.getDraws()">{{skill.amount}} {{skill.sphere}}</div>
+        </div>
+        <div class="cardAbilityContainer">
+            <div>
+                <span class="cardAbilityTitle">
+                    {{card.getOncePerTurnAbility()[0]}}
+                </span>
+                <span class="cardAbilityText">
+                    - {{card.getOncePerTurnAbility()[1]}}
+                </span>
+            </div>
+            <div>
+                <span class="cardAbilityTitle">
+                    {{card.getOncePerGameAbility()[0]}}
+                </span>
+                <span class="cardAbilityText">
+                    - {{card.getOncePerGameAbility()[1]}}
+                </span>
+            </div>
+            <div>
+                <span class="cardAbilityTitle">
+                    {{card.getWeakness()[0]}}
+                </span>
+                <span class="cardAbilityText">
+                    - {{card.getWeakness()[1]}}
+                </span>
+            </div>
+        </div>
+        <div class="cardLocation">Setup: {{card.getStartLocation()}}</div>
+    </div>
