@@ -1,0 +1,56 @@
+<div class="container-fluid characterDetail-container">
+    <div class="row characterDetail-nameRow">
+        
+        <div class="col-xs-8 characterDetail-nameBox">
+                <span class="characterDetail-name">{{character.name}}</span>
+                <span ng-show= "alternateExists">(<a href="#/characters/{{character.alternateOf}}">Alternate version</a>)</span>
+            </div>
+        <div class="col-xs-4">
+            <span ng-class="{'Cylon Leader': 'cardCylon', 'Political Leader': 'cardPolitical', 'Military Leader': 'cardMilitary', 'Pilot': 'cardPilot', 'Support': 'cardSupport'}[character.type]">{{character.type}}</span>
+        </div>
+    </div>
+        
+    <div class="row">
+        <div class="col-xs-4">
+            <div class="characterDetail-infoContainer" ng-hide="character.type == 'Cylon Leader'">
+                <div class="characterDetail-inheritance">Admiral: {{character.admiralInheritance}}</div>
+                <div class="characterDetail-inheritance">President: {{character.presidentInheritance}}</div>
+                <div class="characterDetail-inheritance">CAG: {{character.cagInheritance}}</div>
+            </div>
+            <div class="characterDetail-infoContainer" ng-show="character.type == 'Cylon Leader'">
+                <p>Cylon leader can never  become admiral, president or CAG.</p>
+            </div>
+            <div class="characterDetail-drawContainer">
+                <div ng-repeat="draw in character.draws" ng-class="{'Politics': 'drawPolitics',
+                'Leadership': 'drawLeadership',
+                'Tactics': 'drawTactics',
+                'Piloting' : 'drawPiloting',
+                'Engineering': 'drawEngineering',
+                'Treachery': 'drawTreachery',
+                'Leadership/Politics': 'drawLeadershipPolitics',
+                'Politics/Tactics': 'drawPoliticsTactics',
+                'Leadership/Engineering': 'drawLeadershipEngineering',
+                'Tactics/Leadership': 'drawTacticsLeadership',
+                'Treachery/Engineering': 'drawTreacheryEngineering',
+                'Treachery/Tactics': 'drawTreacheryTactics',
+                'Tactics/Piloting': 'drawTacticsPiloting'}[draw.sphere]">
+                    {{draw.amount}} {{draw.sphere}}
+                </div>
+            </div>
+            <div class="row-fluid characterDetail-expansion">Expansion: {{character.set}}</div>
+        </div>
+        <div class="col-xs-8 characterDetail-abilityBox">
+            <div class="row-fluid characterDetail-oncePerTurn">
+                <span class="characterDetail-abilityTitle">{{character.oncePerTurnTitle}}</span> - <span class="characterDetail-abilityText">{{character.oncePerTurnText}}</span>
+            </div>
+            <div class="row-fluid characterDetail-oncePerGame">
+                <span class="characterDetail-abilityTitle">{{character.oncePerGameTitle}}</span> - <span class="characterDetail-abilityText">{{character.oncePerGameText}}</span>
+            </div>
+            <div class="row-fluid characterDetail-weakness">
+                <span class="characterDetail-abilityTitle">{{character.weaknessTitle}}</span> - <span class="characterDetail-abilityText">{{character.weaknessText}}</span>
+            </div>
+            <div class="characterDetail-setup">Setup: {{character.startLocation}}</div>
+        </div>
+    </div>
+    
+</div>

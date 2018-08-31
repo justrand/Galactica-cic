@@ -1,0 +1,40 @@
+
+    <div class="draftSetupContainer" >
+        <form name="draftSetupForm" ng-controller="DraftSetupController" ng-submit="submitDraft()" ng-hide="draftSetupDone">
+            <div class="row">
+                <div class="col-xs-12"><h2>Players</h2></div>
+            </div>    
+            
+           <div class="row draftSetup-playerRow">
+               <div class="col-xs-2 draftSetup-playerCol" ng-class="{'3':'draftSetup-playerColSelected'}[draftSetupPlayers]"><input type="radio" ng-model="draftSetupPlayers" value="3">3</div> 
+               <div class="col-xs-2 draftSetup-playerCol" ng-class="{'4':'draftSetup-playerColSelected'}[draftSetupPlayers]"><input type="radio" ng-model="draftSetupPlayers" value="4">4</div>
+               <div class="col-xs-2 draftSetup-playerCol" ng-class="{'5':'draftSetup-playerColSelected'}[draftSetupPlayers]"><input type="radio" ng-model="draftSetupPlayers" value="5">5</div>
+               <div class="col-xs-2 draftSetup-playerCol" ng-class="{'6':'draftSetup-playerColSelected'}[draftSetupPlayers]"><input type="radio" ng-model="draftSetupPlayers" value="6">6</div>
+               <div class="col-xs-2 draftSetup-playerCol" ng-class="{'7':'draftSetup-playerColSelected'}[draftSetupPlayers]" ng-show="show7thPlayer"><input type="radio" ng-model="draftSetupPlayers" value="7">7</div>
+           </div>
+           <div class="row">
+               <div class="col-xs-12" ng-hide="show7thPlayer">Without Pegasus, Daybreak or Cylon leaders, 7 player game is not possible.</div>
+           </div> 
+            
+      
+        <div class="row">
+            <div class="col-xs-12">
+               <h2>Character sets</h2>
+                <div class="draftSetup-row"><input type="checkbox" ng-model="draftSetupBase"> Base</div>
+                <div class="draftSetup-row"><input type="checkbox" ng-model="draftSetupPegasus"> Pegasus</div>
+                <div class="draftSetup-row"><input type="checkbox" ng-model="draftSetupExodus"> Exodus</div>
+                <div class="draftSetup-row"><input type="checkbox" ng-model="draftSetupDaybreak"> Daybreak</div>
+                
+                <h2>Other setup</h2>
+                <div class="draftSetup-row"><input type="checkbox" ng-model="draftSetupCylonLeaders" ng-disabled="!draftSetupDaybreak&&!draftSetupPegasus"> Allow Cylon Leader</div>
+                <div class="draftSetup-row"><input type="checkbox" ng-model="draftSetupRefuseCylonLeader" ng-disabled="!draftSetupCylonLeaders"> Can refuse Cylon Leader</div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <input type="submit" class="draftSetup-submitButton" value="Start Draft">
+            </div>
+        </div>
+        </form>
+    </div>
+

@@ -1,0 +1,32 @@
+<table>
+                        <tr>
+                            <th class="col-xs-1"> </th>
+                            <th class="col-xs-3"><a href="" ng-click="predicate = 'name'; reverse=false">Name</a></th>
+                            <th class="col-xs-3"><a href="" ng-click="predicate = 'type'; reverse=false">Type</a></th>
+                            <th class="col-xs-1 class="characterTableCell""><a href="" ng-click="predicate = 'admiralInheritance'; reverse=false">Admiral</a></th>
+                            <th class="col-xs-1 class="characterTableCell""><a href="" ng-click="predicate = 'presidentInheritance'; reverse=false">President</a></th>
+                            <th class="col-xs-1 class="characterTableCell""><a href="" ng-click="predicate = 'cagInheritance'; reverse=false">CAG</a></th>
+                        </tr>
+                        <tr ng-repeat = "character in characters | filter:query | orderBy:predicate" class="characterRow">
+                           <td>{{$index+1}}</td>
+                           <td class="characterTable-name">
+                               <span class="characterTitle_admiral" ng-show="character.isAdmiral"></span>
+                               <span class="characterTitle_president" ng-show="character.isPresident"></span>
+                               <span class="characterTitle_cag" ng-show="character.isCag"></span>
+                               <a href="#/characters/{{character.id}}">{{character.name}}</a></td>
+                           <td>
+                               <span ng-class="{'Cylon Leader': 'cardCylon', 'Political Leader': 'cardPolitical', 'Military Leader': 'cardMilitary', 'Pilot': 'cardPilot', 'Support': 'cardSupport'}[character.type]">{{character.type}}</span></td>
+                           <td class="characterTableCell">
+                               <span ng-if="character.admiralInheritance != 100">{{character.admiralInheritance}}</span>
+                               <span ng-if="character.admiralInheritance == 100">-</span>
+                           </td>
+                           <td class="characterTableCell">
+                               <span ng-if="character.presidentInheritance != 100">{{character.presidentInheritance}}</span>
+                               <span ng-if="character.presidentInheritance == 100">-</span>
+                           </td>
+                           <td class="characterTableCell">
+                               <span ng-if="character.cagInheritance != 100">{{character.cagInheritance}}</span>
+                               <span ng-if="character.cagInheritance == 100">-</span>
+                          </td> 
+                        </tr>
+                    </table>

@@ -1,0 +1,13 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-8">
+            <div ng-include="'characterCard.html'"></div>
+        </div>
+        <div class="col-sm-4">
+            <table>
+                <tr ng-repeat="character in characters" ng-include="'simpleListElement.html'" class="row characterRow"></tr>
+            </table>
+        </div>
+    </div>
+    
+</div>
