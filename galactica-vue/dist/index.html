@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Galactica CIC</title>
+        <link rel="stylesheet" type="text/css" href="galactica.css" />
+        <script type="text/javascript" src="galactica.js"></script>
+    </head>
+    <body>
+        <div class="container-fluid" id="galactica-app">
+            <div class="row">
+                <div class="col-12">
+                    <button class="btn-default" v-on:click="drawRandom">Draw Random</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <character-card v-for="card in deck" v-bind:key="card.id" v-bind:card="card"></character-card>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
