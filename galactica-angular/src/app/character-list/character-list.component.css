@@ -1,0 +1,25 @@
+.character-list-entry {
+    margin: 5px 0;
+}
+.character-list {
+    list-style-type: none;
+    margin: 0;
+}
+
+.character-list-inheritance {
+    background-size: auto 100%;
+    background-position: left;
+    background-repeat: no-repeat;
+    padding-left: 20px;
+    padding-right: 5px;
+}
+
+.cag {
+    background-image: url('../../assets/images/galactica_cag_s.png');
+}
+.admiral {
+    background-image: url('../../assets/images/galactica_admiral_s.png');
+}
+.president {
+    background-image: url('../../assets/images/galactica_president_s.png');
+}

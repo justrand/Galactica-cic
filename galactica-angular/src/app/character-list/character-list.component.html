@@ -1,0 +1,22 @@
+<ul class="character-list">
+  <li *ngFor="let character of characters" class="character-list-entry">
+    <div class="row">
+      <div class="col-sm-4">
+        {{character.name}}
+      </div>
+      <div class="col-sm-4">
+        <span [ngClass]="{'Political Leader': 'cardPolitical',
+                          'Military Leader' : 'cardMilitary',
+                          'Pilot' : 'cardPilot',
+                          'Support' : 'cardSupport',
+                          'Cylon Leader' : 'cardCylon'}[character.type]">{{character.type}}</span>
+      </div>
+      <div class="col-sm-2">
+        <span class="character-list-inheritance president">{{character.presidentInheritance}}</span>     
+          <span class="character-list-inheritance admiral">{{character.admiralInheritance}}</span>
+          <span class="character-list-inheritance cag">{{character.cagInheritance}}</span>
+       </div>  
+    </div>
+    
+  </li>
+</ul>
