@@ -5,18 +5,15 @@
         <title>Galactica CIC v2</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, user-scalable=no">
-     
-        <link rel="stylesheet" href="../lib/bootstrap/css/bootstrap-responsive.min.css">
-        <link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.min.css">
         <link rel="stylesheet" href="../build/css/galactica_styles.css">
-        <script type="text/javascript" src="../lib/angular/angular.min.js"></script>
-        <script type="text/javascript" src="../lib/angular/angular-route.min.js"></script>
-        <script type="text/javascript" src="../build/Galactica-cic2.js"></script>
+        <script type="text/javascript" src="js/vendor.bundle.js"></script>
+        <script type="text/javascript" src="../js/galactica.bundle.js"></script>
+
     </head>
     <body>
-        <div class="wrapper">
-        <div ng-include="'mainmenu.html'"></div>
-        <div ng-view ></div>
-        </div>
+        <section class="wrapper">
+            <div ng-include="'mainmenu.html'"></div>
+            <div ng-view ></div>
+        </section>
     </body>
 </html>

@@ -8,23 +8,23 @@ module.exports = function(grunt) {
                 banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
             },
             build: {
-                src: 'build/<%= pkg.name %>.js',
-                dest: 'build/<%= pkg.name %>.min.js'
+                src: 'dist/<%= pkg.name %>.js',
+                dest: 'dist/<%= pkg.name %>.min.js'
             }
         },
         concat: {
             dist: {
                 src: ['src/mainApp.js', 'src/controllers.js', 'src/characterDataService.js', 'src/draftDeck.js'],
-                dest: 'build/<%= pkg.name %>.js'
+                dest: 'dist/<%= pkg.name %>.js'
             }
         },
         less: {
             development: {
                 options: {
-                    paths: ["styles", "build/css"]
+                    paths: ["styles", "dist/css"]
                 },
                 files: {
-                    "build/css/galactica_styles.css": "styles/galactica_styles.less"
+                    "dist/css/galactica_styles.css": "styles/galactica_styles.less"
                 }
             }
         }
