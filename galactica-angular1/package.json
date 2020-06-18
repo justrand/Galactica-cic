@@ -13,7 +13,7 @@
   "author": "Jukka Stranden",
   "license": "MIT",
   "devDependencies": {
-    "angular": "^1.7.4",
+    "angular": "^1.8.0",
     "bootstrap": "^4.1.3",
     "grunt": "~1.0.3",
     "grunt-contrib-concat": "~1.0.1",
